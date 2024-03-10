@@ -1,0 +1,5 @@
+2023-12-30 18:20:22 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker 36bd8123 ...
+2023-12-30 18:20:25 | ERROR | stderr | Downloading shards:   0%|                                                                         | 0/7 [00:00<?, ?it/s]
+2023-12-30 18:20:27 | ERROR | stderr | 
+2023-12-30 18:20:27 | ERROR | stderr | model-00006-of-00007.safetensors:   0%|                                                     | 0.00/1.93G [00:00<?, ?B/s]
+2023-12-30 18:20:27 | ERROR | stderr | [A

@@ -1,0 +1,10 @@
+name: show_image
+description: display image by passing an address
+parameters:
+  type: object
+  properties:
+    string:
+      type: string
+      description: the address of image to show
+required:
+  - string

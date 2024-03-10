@@ -1,0 +1,9 @@
+目标记录：
+2024.1.15 
+在dialogue.py中加入agent列表，或者完善自定义agent内容
+在prompt_config.py中完成agent prompt的内容
+2024.1.23
+prompt_config.py的模板需要修改，有必要的时候对custom_templae.py进行大改
+当前状态:调用工具异常
+2024.1.24
+新任务：1.内置pdf读取器能否读取图片，2.加一些agent功能，类似那种侧框列出来的那些

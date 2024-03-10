@@ -1,0 +1,13 @@
+2024-01-23 22:23:21 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker 25cdf310 ...
+2024-01-23 22:23:25 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                  | 0/7 [00:00<?, ?it/s]
+2024-01-23 22:23:26 | ERROR | stderr | Loading checkpoint shards:  14%|████████▎                                                 | 1/7 [00:00<00:02,  2.87it/s]
+2024-01-23 22:23:26 | ERROR | stderr | Loading checkpoint shards:  29%|████████████████▌                                         | 2/7 [00:00<00:01,  2.81it/s]
+2024-01-23 22:23:26 | ERROR | stderr | Loading checkpoint shards:  43%|████████████████████████▊                                 | 3/7 [00:01<00:01,  2.81it/s]
+2024-01-23 22:23:27 | ERROR | stderr | Loading checkpoint shards:  57%|█████████████████████████████████▏                        | 4/7 [00:01<00:01,  2.87it/s]
+2024-01-23 22:23:27 | ERROR | stderr | Loading checkpoint shards:  71%|█████████████████████████████████████████▍                | 5/7 [00:01<00:00,  2.85it/s]
+2024-01-23 22:23:28 | ERROR | stderr | Loading checkpoint shards:  86%|█████████████████████████████████████████████████▋        | 6/7 [00:02<00:00,  2.82it/s]
+2024-01-23 22:23:28 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████| 7/7 [00:02<00:00,  3.17it/s]
+2024-01-23 22:23:28 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████| 7/7 [00:02<00:00,  2.97it/s]
+2024-01-23 22:23:28 | ERROR | stderr | 
+2024-01-23 22:23:30 | INFO | model_worker | Register to controller
+2024-01-23 22:31:50 | ERROR | model_worker | heart beat error: HTTPConnectionPool(host='127.0.0.1', port=20001): Max retries exceeded with url: /receive_heart_beat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f113fb25660>: Failed to establish a new connection: [Errno 111] Connection refused'))
