@@ -17,16 +17,29 @@ if __name__ == "__main__":
     is_lite = "lite" in sys.argv
 
     st.set_page_config(
-        "Langchain-Chatchat WebUI",
-        os.path.join("img", "zhihuikeyanjiaoxue.png"),
+        "CampusLinker WebUI",
+        os.path.join("img", "CampusLinker.jpg"),
         initial_sidebar_state="expanded",
+        # page_bg_color="white",
+        # theme
         menu_items={
             'Get Help': 'https://github.com/chatchat-space/Langchain-Chatchat',
             'Report a bug': "https://github.com/chatchat-space/Langchain-Chatchat/issues",
-            'About': f"""欢迎使用 智慧科研教学辅助平台 WebUI {VERSION}！"""
+            'About': f"""欢迎使用 CampusLinker WebUI {VERSION}！"""
         }
+        
     )
 
+    st.markdown(
+        """
+        <style>
+        .css-1v4eu6t {
+            background-color: #ffffff; /* 将 #ffffff 替换为您喜欢的白色色值 */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     pages = {
         "对话": {
             "icon": "chat",
@@ -41,14 +54,14 @@ if __name__ == "__main__":
             st.image(
                 os.path.join(
                     "img",
-                    "logo-zhihuikeyanjiaoxue.png"
+                    "CampusLinker.jpg"
                 ),
                 use_column_width=True
             )
-            st.caption(
-                f"""<p align="right">当前版本：{VERSION}</p>""",
-                unsafe_allow_html=True,
-            )
+            # st.caption(
+            #     f"""<p align="right">当前版本：{VERSION}</p>""",
+            #     unsafe_allow_html=True,
+            # )
             options = list(pages)
             icons = [x["icon"] for x in pages.values()]
 
