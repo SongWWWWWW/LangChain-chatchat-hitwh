@@ -1,0 +1,298 @@
+2024-03-17 16:36:37 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m63519[0m]
+2024-03-17 16:36:37 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 16:36:37 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 16:36:37 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 16:40:05 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m64160[0m]
+2024-03-17 16:40:05 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 16:40:05 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 16:40:05 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:00:38 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m65022[0m]
+2024-03-17 17:00:38 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:00:38 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:00:38 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:05:01 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m65738[0m]
+2024-03-17 17:05:01 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:05:01 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:05:01 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:08:57 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m66428[0m]
+2024-03-17 17:08:57 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:08:57 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:08:57 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:14:42 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-03-17 17:14:54 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m67138[0m]
+2024-03-17 17:14:54 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:14:54 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:14:54 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:18:04 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m67828[0m]
+2024-03-17 17:18:04 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:18:04 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:18:04 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:25:30 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m68546[0m]
+2024-03-17 17:25:30 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:25:30 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:25:30 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:30:43 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m69280[0m]
+2024-03-17 17:30:43 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:30:43 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:30:43 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 17:37:45 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m70049[0m]
+2024-03-17 17:37:45 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 17:37:45 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 17:37:45 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 20:03:48 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m72285[0m]
+2024-03-17 20:03:48 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 20:03:48 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 20:03:48 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 20:16:15 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m73139[0m]
+2024-03-17 20:16:15 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 20:16:15 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 20:16:15 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 20:33:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50544 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:35:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41002 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:35:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41008 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:35:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41022 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:35:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41034 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:35:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37810 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:36:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39148 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:36:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39152 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:36:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39162 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:36:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39178 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:36:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39192 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:38:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36346 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:38:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36350 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:38:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36358 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:38:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36366 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:38:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36372 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:40:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34606 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:40:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34618 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:40:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34632 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:40:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34640 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 20:40:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34642 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-17 21:03:21 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m77109[0m]
+2024-03-17 21:03:21 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 21:03:21 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 21:03:21 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 21:04:50 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m77716[0m]
+2024-03-17 21:04:50 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 21:04:50 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 21:04:50 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 21:06:55 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m78325[0m]
+2024-03-17 21:06:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 21:06:55 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 21:06:55 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 21:08:10 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m78922[0m]
+2024-03-17 21:08:10 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 21:08:10 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 21:08:10 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 21:10:40 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m79606[0m]
+2024-03-17 21:10:40 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 21:10:40 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 21:10:40 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 21:14:46 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m80288[0m]
+2024-03-17 21:14:46 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 21:14:46 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 21:14:46 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-17 21:20:58 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m80982[0m]
+2024-03-17 21:20:58 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-17 21:20:58 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-17 21:20:58 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-18 10:04:34 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m84511[0m]
+2024-03-18 10:04:34 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 10:04:34 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 10:04:34 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:20000[0m (Press CTRL+C to quit)
+2024-03-18 10:44:35 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m85740[0m]
+2024-03-18 10:44:35 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 10:44:35 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 10:44:35 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 20000): address already in use
+2024-03-18 10:44:35 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-03-18 10:44:35 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-03-18 10:47:16 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m86420[0m]
+2024-03-18 10:47:16 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 10:47:16 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 10:47:16 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 20000): address already in use
+2024-03-18 10:47:16 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-03-18 10:47:16 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-03-18 10:49:20 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m87043[0m]
+2024-03-18 10:49:20 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 10:49:20 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 10:49:20 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 10:52:03 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m87654[0m]
+2024-03-18 10:52:03 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 10:52:03 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 10:52:03 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 11:22:30 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m90010[0m]
+2024-03-18 11:22:30 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 11:22:30 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 11:22:30 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 25000): address already in use
+2024-03-18 11:22:30 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-03-18 11:22:30 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-03-18 11:41:23 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m90664[0m]
+2024-03-18 11:41:23 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 11:41:23 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 11:41:23 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 11:46:22 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m91351[0m]
+2024-03-18 11:46:22 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 11:46:22 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 11:46:22 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 11:50:59 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m92169[0m]
+2024-03-18 11:50:59 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 11:50:59 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 11:50:59 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 12:02:28 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m92939[0m]
+2024-03-18 12:02:28 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 12:02:28 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 12:02:28 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 12:07:40 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m93764[0m]
+2024-03-18 12:07:40 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 12:07:40 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 12:07:40 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 12:11:16 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m94463[0m]
+2024-03-18 12:11:16 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 12:11:16 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 12:11:16 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 12:15:21 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-03-18 12:15:32 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m95271[0m]
+2024-03-18 12:15:32 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 12:15:32 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 12:15:32 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 18:36:36 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m97992[0m]
+2024-03-18 18:36:36 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 18:36:36 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 18:36:36 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 18:59:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48014 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 18:59:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41112 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-03-18 19:32:06 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m99718[0m]
+2024-03-18 19:32:06 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 19:32:06 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 19:32:06 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 19:41:55 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m101288[0m]
+2024-03-18 19:41:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 19:41:55 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 19:41:55 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 19:42:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34214 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-03-18 19:42:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34228 - "[1mGET /docs HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:42:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34228 - "[1mGET /swagger-ui.css HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:42:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34238 - "[1mGET /swagger-ui-bundle.js HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:42:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34238 - "[1mGET /openapi.json HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:42:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34228 - "[1mGET /favicon.png HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:44:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60316 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-03-18 19:44:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60316 - "[1mGET /docs HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:44:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60316 - "[1mGET /openapi.json HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:51:39 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:39 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:39 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:39 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:39 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:39 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:42 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:42 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:42 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:42 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:43 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:43 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:43 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:51:43 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:09 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m102820[0m]
+2024-03-18 19:52:09 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 19:52:09 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 19:52:09 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 19:52:15 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:15 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:15 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:15 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:45 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:45 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:45 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:45 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:45 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:52:45 | ERROR | stderr | [33mWARNING[0m:  Invalid HTTP request received.
+2024-03-18 19:54:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36020 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-03-18 19:54:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36020 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-03-18 19:54:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36036 - "[1mGET /docs HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:54:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36036 - "[1mGET /openapi.json HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 19:59:23 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m104440[0m]
+2024-03-18 19:59:23 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 19:59:23 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 19:59:23 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 20:03:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45450 - "[1mGET /openapi.json HTTP/1.1[0m" [32m200 OK[0m
+2024-03-18 20:28:48 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m108684[0m]
+2024-03-18 20:28:48 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 20:28:48 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 20:28:48 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 20:38:08 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m111045[0m]
+2024-03-18 20:38:08 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 20:38:08 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 20:38:08 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 20:39:03 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m111511[0m]
+2024-03-18 20:39:03 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 20:39:03 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 20:39:03 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 20:47:03 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m113759[0m]
+2024-03-18 20:47:03 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 20:47:03 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 20:47:03 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 22:15:57 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m126126[0m]
+2024-03-18 22:15:57 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 22:15:57 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 22:15:57 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-18 22:32:55 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m129776[0m]
+2024-03-18 22:32:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-18 22:32:55 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-18 22:32:55 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 13:24:10 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m134769[0m]
+2024-03-19 13:24:10 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 13:24:10 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 13:24:10 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 13:47:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36272 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-03-19 13:48:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45456 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-03-19 13:49:11 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46942 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-03-19 13:51:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34144 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-03-19 13:52:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56684 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-03-19 14:08:35 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m138446[0m]
+2024-03-19 14:08:35 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:08:35 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:08:35 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:21:15 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m141757[0m]
+2024-03-19 14:21:15 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:21:15 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:21:15 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:24:42 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m143105[0m]
+2024-03-19 14:24:42 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:24:42 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:24:42 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:26:07 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m144122[0m]
+2024-03-19 14:26:07 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:26:07 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:26:07 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:27:52 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m145088[0m]
+2024-03-19 14:27:52 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:27:52 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:27:52 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:31:43 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m146083[0m]
+2024-03-19 14:31:43 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:31:43 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:31:43 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:32:59 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m146959[0m]
+2024-03-19 14:32:59 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:32:59 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:32:59 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:36:05 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m148029[0m]
+2024-03-19 14:36:05 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:36:05 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:36:05 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:37:20 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m149031[0m]
+2024-03-19 14:37:20 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:37:20 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:37:20 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:40:12 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m150141[0m]
+2024-03-19 14:40:12 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:40:12 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:40:12 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:41:33 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m150998[0m]
+2024-03-19 14:41:33 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:41:33 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:41:33 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
+2024-03-19 14:42:57 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m152038[0m]
+2024-03-19 14:42:57 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-03-19 14:42:57 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-03-19 14:42:57 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:25000[0m (Press CTRL+C to quit)
