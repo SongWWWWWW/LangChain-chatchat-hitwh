@@ -43,7 +43,7 @@ ONLINE_LLM_MODEL = {
     "openai-api": {
         "model_name": "gpt-3.5-turbo",
         "api_base_url": "https://api.openai.com/v1",
-        "api_key": "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",
+        # "api_key": "s-k-S-44KwzcqlRcZEcIzs3i3T3BlbkFJ3l1kUH2DExVkKMILg7Uh",
         "openai_proxy": "",
     },
 

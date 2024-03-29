@@ -10,24 +10,24 @@ tools = [
     #     description="Useful for when you need to answer questions about simple calculations",
     #     args_schema=CalculatorInput,
     # ),
-    Tool.from_function(
-        func=arxiv,
-        name="arxiv",
-        description="A wrapper around Arxiv.org for searching and retrieving scientific articles in various fields.",
-        args_schema=ArxivInput,
-    ),
+    # Tool.from_function(
+    #     func=arxiv,
+    #     name="arxiv",
+    #     description="A wrapper around Arxiv.org for searching and retrieving scientific articles in various fields.",
+    #     args_schema=ArxivInput,
+    # ),
     # Tool.from_function(
     #     func=weathercheck,
     #     name="weather_check",
     #     description="",
     #     args_schema=WhetherSchema,
     # ),
-    Tool.from_function(
-        func=shell,
-        name="shell",
-        description="Use Shell to execute Linux commands",
-        args_schema=ShellInput,
-     ),
+    # Tool.from_function(
+    #     func=shell,
+    #     name="shell",
+    #     description="Use Shell to execute Linux commands",
+    #     args_schema=ShellInput,
+    #  ),
     # Tool.from_function(
     #     func=search_knowledgebase_complex,
     #     name="search_knowledgebase_complex",

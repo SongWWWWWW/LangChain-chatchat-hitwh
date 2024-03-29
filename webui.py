@@ -1,7 +1,7 @@
 import streamlit as st
 from webui_pages.utils import *
 from streamlit_option_menu import option_menu
-import webui_pages.dialogue.dialogue as dialogue
+# import webui_pages.dialogue.dialogue as dialogue
 from webui_pages.dialogue.dialogue import dialogue_page, chat_box
 from webui_pages.dialogue import dialogue
 from webui_pages.knowledge_base.knowledge_base import knowledge_base_page
@@ -90,7 +90,7 @@ if __name__ == "__main__":
                 os.path.join(
                     "img",
                     "zhihuikeyanjiaoxue.png",
-                    use_column_width=True
+                    # use_column_width=True
             )
             )
             st.caption(
@@ -113,8 +113,8 @@ if __name__ == "__main__":
                 local_path = "/home/root1/wcc/Langchain-Chatchat/save_excel"
                 os.makedirs(local_path,exist_ok=True)
                 filename = file_uploader.name
-                
-                dialogue.NAME_FILE = filename
+                dialogue.NAME_EXCEL = filename
+                print(dialogue.NAME_EXCEL)
                 with open(os.path.join(local_path, filename),"wb") as f:
                     f.write(file_uploader.read())
                 st.success(f"文件成功保存到 {local_path}/{filename} ")

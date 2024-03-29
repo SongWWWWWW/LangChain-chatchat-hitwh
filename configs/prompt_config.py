@@ -193,7 +193,7 @@ PROMPT_TEMPLATES = {
             '使用下面的格式:\n'
             'Question: 你必须回答的的问题\n'
             'Thought: 你应该时刻思考做什么，用什么工具来做.\n'
-            'Action: 你应执行的操作应为 [{python: "Use python interpreter to run python code"}, {show_image: "display image by passing an address"}]\n'
+            'Action: 你应执行的操作应为 [{python: "Use python interpreter to run python code"}]\n'
             'Action Input: 操作的输入\n'
             'Observation: 操作的结果\n'
             '... ( Thought/Action/Action Input/Observation 能够被重复多次)\n'
