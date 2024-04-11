@@ -1,5 +1,5 @@
 # 本项目继承Langchain-Chatchat
-
+# <span style="color:red"> 注意，本项目config/model_config.py没有添加,	如需使用手动添加，参考https://github.com/chatchat-space/Langchain-Chatchat</span>
 # 按照下面步骤进行环境配置
 ```bash
 conda create -n chatchat python=3.10
