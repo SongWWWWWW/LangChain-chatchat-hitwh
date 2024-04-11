@@ -1,0 +1,17 @@
+2024-04-10 20:12:43.303 | WARNING  | extra_function.translator:make_request:56 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 20:14:00.302 | WARNING  | extra_function.translator:make_request:56 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 20:16:01.191 | WARNING  | extra_function.translator:make_request:56 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 20:17:21.438 | WARNING  | extra_function.translator:make_request:56 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 20:31:59.095 | WARNING  | extra_function.translator:make_request:56 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:26:00.372 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:27:11.546 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:27:32.543 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:28:25.466 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:29:33.730 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:30:07.365 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:58:39.211 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 21:59:31.657 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 22:06:52.417 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 22:07:44.960 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 22:17:23.599 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.
+2024-04-10 22:18:16.480 | WARNING  | extra_function.translator:make_request:57 - Rate limit reached. Waiting for 60 seconds before retrying.

@@ -35,9 +35,53 @@ PROMPT_TEMPLATES = {
         "py":
             '你是一个聪明的代码助手，请你给我写出简单的py代码。 \n'
             '{{ input }}',
-            
-    },
 
+        "translator":
+            '你是翻译论文方面的专家，以下给出相应的论文内容，请进行翻译。注意，'
+            '1. 每句话都要翻译.'
+            '2. 如果遇到你不确定的词汇，请在你翻译的这个词之后直接用小括号标注原文的这个词'
+            '3. 翻译要做到语言连贯，上下文内容衔接。'
+            '4. 翻译目标语言为中文'
+            '如果没有给出相应的论文内容，请提醒用户上传文件'
+            '以下为论文内容，请开始进行翻译:\n'
+            '用户输入：{input}',
+
+        "summary":
+            '1. Mark the title of the paper (with Chinese translation)\n'
+            '2. list all the authors\' names (use English) \n'
+            '3. mark the first author\'s affiliation (output Chinese translation only) \n'
+            '4. mark the keywords of this article (use English)\n'
+            '5. link to the paper, Github code link (if available, fill in Github:None if not)\n'
+            '6. summarize according to the following four points.Be sure to use Chinese answers (proper nouns need to be marked in English)\n'
+            '   - (1):What is the research background of this article?(use Chinese)\n'
+            '   - (2):What are the past methods? What are the problems with them? Is the approach well motivated?(use Chinese)\n'
+            '   - (3):What is the research methodology proposed in this paper?(use Chinese)\n'
+            '   - (4):On what task and what performance is achieved by the methods in this paper? Can the performance support their goals?(use Chinese)\n'
+            'Follow the format of the output that follows:\n'
+            '   1. Title: xxx\n\n'
+            '   2. Authors: xxx\n\n'
+            '   3. Affiliation: xxx\n\n'
+            '   4. Keywords: xxx\n\n'
+            '   5. Urls: xxx or xxx , xxx \n\n'
+            '   6. Summary: \n\n'
+            '       - (1):xxx;\n'
+            '       - (2):xxx;\n'
+            '       - (3):xxx;\n'
+            '       - (4):xxx.\n\n'
+            'Be sure to use Chinese answers (proper nouns need to be marked in English), statements as concise and academic as possible,\n'
+            'do not have too much repetitive information, numerical values using the original numbers.\n'
+            'Artical content is: \n'
+            '{input}',
+        "SWOT分析":
+            '你是SWOT分析方面的专家，你能根据给定的信息进行详细而又准确的分析。'
+            '请提供SWOT分析的全面内容，确保包括以下方面：\n'
+            '- Strengths (优势)：组织或项目的内部优势因素，帮助实现目标和成功的方面。\n'
+            '- Weaknesses (劣势)：组织或项目的内部不利因素，可能阻碍实现目标和成功的方面。\n'
+            '- Opportunities (机会)：外部环境中组织或项目可以利用的有利条件或情况。\n'
+            '- Threats (威胁)：外部环境中可能对组织或项目造成负面影响的不利条件或情况。\n'
+            '确保对每个方面进行详细描述，并提供具体的例子或数据支持。'
+            '{{ input }}'
+    },
 
     "knowledge_base_chat": {
         "default":

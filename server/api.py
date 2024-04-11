@@ -37,6 +37,13 @@ def create_app(run_mode: str = None):
         title="Langchain-Chatchat API Server",
         version=VERSION
     )
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
     MakeFastAPIOffline(app)
     # Add CORS middleware to allow all origins
     # 在config.py中设置OPEN_DOMAIN=True，允许跨域

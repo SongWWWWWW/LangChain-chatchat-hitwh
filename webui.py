@@ -2,7 +2,7 @@ import streamlit as st
 from webui_pages.utils import *
 from streamlit_option_menu import option_menu
 # import webui_pages.dialogue.dialogue as dialogue
-from webui_pages.dialogue.dialogue import dialogue_page, chat_box
+from webui_pages.dialogue.dialogue import dialogue_page
 from webui_pages.dialogue import dialogue
 from webui_pages.knowledge_base.knowledge_base import knowledge_base_page
 import os
@@ -29,19 +29,6 @@ if __name__ == "__main__":
         }
         
     )
-    # st.set_page_config(
-    #     "CampusLinker WebUI",
-    #     os.path.join("img", "CampusLinker.jpg"),
-    #     initial_sidebar_state="expanded",
-    #     # page_bg_color="white",
-    #     # theme
-    #     menu_items={
-    #         'Get Help': 'https://github.com/chatchat-space/Langchain-Chatchat',
-    #         'Report a bug': "https://github.com/chatchat-space/Langchain-Chatchat/issues",
-    #         'About': f"""欢迎使用 CampusLinker WebUI {VERSION}！"""
-    #     }
-        
-    # )
 
     # st.markdown(
     #     """
@@ -53,28 +40,6 @@ if __name__ == "__main__":
     #     """,
     #     unsafe_allow_html=True
     # )
-
-    # st.set_page_config(
-    #     "Langchain-Chatchat WebUI",
-    #     os.path.join("img", "CampusLinker.png"),
-    #     initial_sidebar_state="expanded",
-    #     menu_items={
-    #         'Get Help': 'https://github.com/chatchat-space/Langchain-Chatchat',
-    #         'Report a bug': "https://github.com/chatchat-space/Langchain-Chatchat/issues",
-    #         'About': f"""欢迎使用 CampusLinker WebUI {VERSION}！"""
-    #     }
-    # )
-
-    st.markdown(
-        """
-        <style>
-        .css-1v4eu6t {
-            background-color: #ffffff; /* 将 #ffffff 替换为您喜欢的白色色值 */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
     pages = {
         "对话": {
             "icon": "chat",

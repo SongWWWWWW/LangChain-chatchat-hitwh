@@ -13,6 +13,7 @@ import uuid
 from typing import List, Dict
 from PIL import Image
 global NAME_EXCEL
+from extra_function.translator import OpenAIModel,PaperCleaner,PDFTranslator
 NAME_EXCEL = ""
 chat_box = ChatBox(
     assistant_avatar=os.path.join(
@@ -20,6 +21,7 @@ chat_box = ChatBox(
         "chatchat_icon_blue_square_v2.png"
     )
 )
+
 
 
 def get_messages_history(history_len: int, content_in_expander: bool = False) -> List[Dict]:
@@ -295,144 +297,98 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
         "optional_text_label": "欢迎反馈您打分的理由",
     }
 
-
+    global NAME_EXCEL
     if prompt := st.chat_input(chat_input_placeholder, key="prompt"):
-        # 先判断是否输出了，再将输出赋给prompt
-
-        ####################################################################
-        #global IMPORT_IMAGE
-        #IMPORT_IMAGE = 0
-        #global NAME_EXCEL
-        # 获得文件名称
-        # 查找最后一个点的索引，即文件后缀的起始位置
-        #last_dot_index = NAME_EXCEL.rfind(".")
-        # 如果找到了点，截取文件名
-        # if last_dot_index != -1:
-        #     file_name_without_extension = NAME_EXCEL[:last_dot_index]
-        # else:
-        #     # 如果没有找到点，整个字符串都是文件名
-        #     file_name_without_extension = NAME_EXCEL
-        # if IMPORT_IMAGE>0:
-        #     import pandas as pd
-        #     def get_excel_info(file_path, sheet_name="Sheet1"):
-        #         try:
-        #             # 读取 Excel 文件
-        #             df = pd.read_excel(file_path, sheet_name)
-                    
-        #             # 获取数据结构和列信息
-        #             data_structure = df.shape
-        #             column_names = df.columns.tolist()
-                    
-        #             # 打印信息
-        #             print(f"数据结构：{data_structure}")
-        #             print(f"列名：{column_names}")
-                    
-        #             # 返回结果
-        #             return data_structure, column_names
-        #         except Exception as e:
-        #             print(f"发生错误：{e}")
-        #             return None
-        #     excel_file_path = "/home/root1/wcc/Langchain-Chatchat/save_excel/"+NAME_EXCEL  # 替换为你的 Excel 文件路径
-        #     data_structure, column_names = get_excel_info(excel_file_path)
-        #     pre_prompt = f'''1.如果用户想要得到对应图像，请一次性输出相应要求的全部python代码包括导入的包，\n
-        #                      2.所有的对话文字全部以注释的形式给出\n
-        #                      3.用户输入的表格路径为：{"/home/root1/wcc/Langchain-Chatchat/save_excel/"+NAME_EXCEL},\n
-        #                      4.需要保存图像的路径为：/home/root1/wcc/Langchain-Chatchat/coding/{file_name_without_extension}.png\n
-        #                      5.excel的结构为{data_structure}，excel的column_names为{column_names}\n
-        #                      6.用户的要求为： {prompt}\n  '''
-
         if parse_command(text=prompt, modal=modal): # 用户输入自定义命令
             st.rerun()
         else:
             history = get_messages_history(history_len)
-            # if IMPORT_IMAGE<=0:
-            #     chat_box.user_say(prompt)
-            # else:
-            #     chat_box.user_say(pre_prompt)
             chat_box.user_say(prompt)
             if dialogue_mode == "LLM 对话":
-                # if IMPORT_IMAGE<=0:
-                chat_box.ai_say("正在思考...")
-                text = ""
-                message_id = ""
-                r = api.chat_chat(prompt,
-                                history=history,
-                                conversation_id=conversation_id,
-                                model=llm_model,
-                                prompt_name=prompt_template_name,
-                                temperature=temperature)
-                for t in r:
-                    if error_msg := check_error_msg(t):  # check whether error occured
-                        st.error(error_msg)
-                        break
-                    text += t.get("text", "")
-                    chat_box.update_msg(text)
-                    message_id = t.get("message_id", "")
-                        # print(t)
-                        # global IMPORT_IMAGE
-                        # if "寄" in text and IMPORT_IMAGE==1:
-                        #     print("t中有地址")
-                        #     image_path = "/home/root1/wcc/Langchain-Chatchat/Figure_1.png
-                        #     st.image(image_path, caption=" LLM's Image", use_column_width=True)
-                        #     IMPORT_IMAGE = 0
-                        #     print("\n")
-                        #     print(IMPORT_IMAGE)
-                    # print(r)
-                    # if "寄" in r:
-                    #     print("<IMAGE>")
-                    #     image_path = "/home/root1/wcc/Langchain-Chatchat/Figure_1.png"
-                    #     st.image(image_path, caption=" LLM's Image", use_column_width=True)
-                    # chat_box.update_msg(text)
-                # else:
-                #     chat_box.ai_say("正在思考...")
-                #     text = ""
-                #     message_id = ""
-                #     r = api.chat_chat(pre_prompt,
-                #                     history=history,
-                #                     conversation_id=conversation_id,
-                #                     model=llm_model,
-                #                     prompt_name=prompt_template_name,
-                #                     temperature=temperature)
-                #     for t in r:
-                #         if error_msg := check_error_msg(t):  # check whether error occured
-                #             st.error(error_msg)
-                #             break
-                #         text += t.get("text", "")
-                #         chat_box.update_msg(text)
-                #         message_id = t.get("message_id", "")
-                #     from autogen import AssistantAgent, UserProxyAgent, config_list_from_json
-                #     config_list = config_list_from_json(env_or_file="OAI_CONFIG_LIST")
-                #     user_proxy = UserProxyAgent("user_proxy", code_execution_config={"work_dir": "/home/root1/wcc/Langchain-Chatchat/coding"})
-                #     def extract_code_from_input(user_input, code_start_marker="```python", code_end_marker="```"):
-                #         start_index = user_input.find(code_start_marker)
-                #         end_index = user_input.find(code_end_marker, start_index + len(code_start_marker))
+                
+                path = "/home/root1/wcc/Langchain-Chatchat/save_excel/" + NAME_EXCEL
+                if prompt_template_name == "translator":
+                    text = ""
+                    message_id = ""
+                    chat_box.ai_say("正在思考...")
+                    pdfcleaner = PaperCleaner(path)
 
-                #         if start_index != -1 and end_index != -1:
-                #             return user_input[start_index + len(code_start_marker):end_index].strip()
+                    # for i in pdfcleaner.cleaned_text:
+                        
+                    #     r = api.chat_chat(prompt + i,
+                    #                 history=history,
+                    #                 conversation_id=conversation_id,
+                    #                 model=llm_model,
+                    #                 prompt_name=prompt_template_name,
+                    #                 temperature=temperature)
+                    #     for t in r:
+                    #         if error_msg := check_error_msg(t):  # check whether error occured
+                    #             st.error(error_msg)
+                    #             break
+                    #         text += t.get("text", "")
+                    #         chat_box.update_msg(text)
+                    response = ""
+                    model = OpenAIModel(model="gpt-3.5-turbo")
+                    for i in pdfcleaner.cleaned_text:
+                        prompt = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + i
+                        response += model.make_request(prompt)[0]
+                        chat_box.update_msg(response,streaming = True)
+                    st.download_button(label=":blue[点我下载整篇翻译]",data=response,file_name="response.txt")
+                if prompt_template_name == "summary":
+                    text = ""
+                    message_id = ""
+                    chat_box.ai_say("正在思考...")
+                    pdfcleaner = PaperCleaner(path)
 
-                #         return None
-
-                #     content = extract_code_from_input(text)
-                    
-                #     code_message = {"content": content, "role": "system","language":  "python"}
-                    
-                #     result = user_proxy.execute_code_blocks([(code_message["language"], code_message["content"])])
-                    
-                #     print(result)
-                    # IMPORT_IMAGE -= 0.4
-                    # if IMPORT_IMAGE <=0 : 
-                    #     IMPORT_IMAGE=0
-                metadata = {
-                    "message_id": message_id,
-                    }
-                #image_path = "/home/root1/wcc/Langchain-Chatchat/coding/"+file_name_without_extension+".png"
-                chat_box.update_msg(text, streaming=False, metadata=metadata)  # 更新最终的字符串，去除光标
-                #st.image(image_path, caption=" LLM's Image", use_column_width=True)
-                print("text\n"*10+text)
-                chat_box.show_feedback(**feedback_kwargs,
-                                    key=message_id,
-                                    on_submit=on_feedback,
-                                    kwargs={"message_id": message_id, "history_index": len(chat_box.history) - 1})
+                    # for i in pdfcleaner.cleaned_text:
+                        
+                    #     r = api.chat_chat(prompt + i,
+                    #                 history=history,
+                    #                 conversation_id=conversation_id,
+                    #                 model=llm_model,
+                    #                 prompt_name=prompt_template_name,
+                    #                 temperature=temperature)
+                    #     for t in r:
+                    #         if error_msg := check_error_msg(t):  # check whether error occured
+                    #             st.error(error_msg)
+                    #             break
+                    #         text += t.get("text", "")
+                    #         chat_box.update_msg(text)
+                    response = ""
+                    model = OpenAIModel(model="gpt-3.5-turbo")
+                    prompt = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
+                    response += model.make_request(prompt)[0]
+                    # chat_box.update_msg(response,streaming = True)
+                    chat_box.update_msg(response,streaming = False)
+                    # st.download_button(label=":blue[点我下载整篇翻译]",data=response,file_name="response.txt")
+                else:# if IMPORT_IMAGE<=0:
+                    chat_box.ai_say("正在思考...")
+                    text = ""
+                    message_id = ""
+                    r = api.chat_chat(prompt,
+                                    history=history,
+                                    conversation_id=conversation_id,
+                                    model=llm_model,
+                                    prompt_name=prompt_template_name,
+                                    temperature=temperature)
+                    for t in r:
+                        if error_msg := check_error_msg(t):  # check whether error occured
+                            st.error(error_msg)
+                            break
+                        text += t.get("text", "")
+                        chat_box.update_msg(text)
+                        message_id = t.get("message_id", "")
+                    metadata = {
+                        "message_id": message_id,
+                        }
+                    #image_path = "/home/root1/wcc/Langchain-Chatchat/coding/"+file_name_without_extension+".png"
+                    chat_box.update_msg(text, streaming=False, metadata=metadata)  # 更新最终的字符串，去除光标
+                    #st.image(image_path, caption=" LLM's Image", use_column_width=True)
+                    print("text\n"*10+text)
+                    chat_box.show_feedback(**feedback_kwargs,
+                                        key=message_id,
+                                        on_submit=on_feedback,
+                                        kwargs={"message_id": message_id, "history_index": len(chat_box.history) - 1})
 
             elif dialogue_mode == "自定义Agent问答":
                 if not any(agent in llm_model for agent in SUPPORT_AGENT_MODEL):
@@ -451,7 +407,7 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
                 ans = ""
 
 
-                global NAME_EXCEL
+             
                 # 上传文件
                 import pandas as pd
                 def get_excel_info(file_path, sheet_name="Sheet1"):

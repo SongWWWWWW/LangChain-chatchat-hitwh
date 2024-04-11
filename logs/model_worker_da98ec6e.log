@@ -1,0 +1,15 @@
+2024-04-04 11:29:14 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker da98ec6e ...
+2024-04-04 11:29:17 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                                                                                                    | 0/7 [00:00<?, ?it/s]
+2024-04-04 11:29:21 | ERROR | stderr | Loading checkpoint shards:  14%|████████████████████                                                                                                                        | 1/7 [00:03<00:23,  3.99s/it]
+2024-04-04 11:29:25 | ERROR | stderr | Loading checkpoint shards:  29%|████████████████████████████████████████                                                                                                    | 2/7 [00:08<00:20,  4.17s/it]
+2024-04-04 11:29:30 | ERROR | stderr | Loading checkpoint shards:  43%|████████████████████████████████████████████████████████████                                                                                | 3/7 [00:13<00:18,  4.54s/it]
+2024-04-04 11:29:34 | ERROR | stderr | Loading checkpoint shards:  57%|████████████████████████████████████████████████████████████████████████████████                                                            | 4/7 [00:17<00:12,  4.33s/it]
+2024-04-04 11:29:39 | ERROR | stderr | Loading checkpoint shards:  71%|████████████████████████████████████████████████████████████████████████████████████████████████████                                        | 5/7 [00:21<00:08,  4.35s/it]
+2024-04-04 11:29:43 | ERROR | stderr | Loading checkpoint shards:  86%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                    | 6/7 [00:25<00:04,  4.34s/it]
+2024-04-04 11:29:45 | ERROR | stderr | Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:28<00:00,  3.71s/it]
+2024-04-04 11:29:45 | ERROR | stderr | Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:28<00:00,  4.05s/it]
+2024-04-04 11:29:45 | ERROR | stderr | 
+2024-04-04 11:29:48 | INFO | model_worker | Register to controller
+2024-04-04 11:46:19 | ERROR | model_worker | heart beat error: Expecting value: line 1 column 1 (char 0)
+2024-04-04 11:46:24 | ERROR | model_worker | heart beat error: Expecting value: line 1 column 1 (char 0)
+2024-04-04 11:46:29 | ERROR | model_worker | heart beat error: Expecting value: line 1 column 1 (char 0)
