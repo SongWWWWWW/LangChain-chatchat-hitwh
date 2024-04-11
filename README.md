@@ -1,5 +1,10 @@
 # 本项目继承Langchain-Chatchat
-<font color=#00FFFF size=10 face="微软雅黑">注意，本项目config/model_config.py没有上传，如需使用请参考https://github.com/chatchat-space/Langchain-Chatchat </font>
+
+
+> [!IMPORTANT]
+> 本项目中 config/model_config.py 没有添加，如果需要，请移步https://github.com/chatchat-space/Langchain-Chatchat
+
+
 # 按照下面步骤进行环境配置
 ```bash
 conda create -n chatchat python=3.10
