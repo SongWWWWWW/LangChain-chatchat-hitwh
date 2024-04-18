@@ -72,6 +72,7 @@ async def knowledge_base_chat(query: str = Body(..., description="用户输入",
             max_tokens=max_tokens,
             callbacks=[callback],
         )
+        # 实际上通过knowledge_base_name来找到相应的存储的向量库的名称，调用相应向量库的相关方法来实现检索
         docs = search_docs(query, knowledge_base_name, top_k, score_threshold)
         context = "\n".join([doc.page_content for doc in docs])
         if len(docs) == 0:  # 如果没有找到相关文档，使用empty模板

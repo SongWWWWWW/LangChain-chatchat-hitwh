@@ -311,55 +311,59 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
                     text = ""
                     message_id = ""
                     chat_box.ai_say("正在思考...")
-                    pdfcleaner = PaperCleaner(path)
-
+                    if NAME_EXCEL:
+                        pdfcleaner = PaperCleaner(path)
+                        for i in pdfcleaner.cleaned_text:
+                            temporary_prompt = prompt + "\n" + i
+                            print(temporary_prompt)
+                            r = api.chat_chat(temporary_prompt,
+                                        history=history,
+                                        conversation_id=conversation_id,
+                                        model=llm_model,
+                                        prompt_name=prompt_template_name,
+                                        temperature=temperature)
+                            for t in r:
+                                if error_msg := check_error_msg(t):  # check whether error occured
+                                    st.error(error_msg)
+                                    break
+                                text += t.get("text", "")
+                                chat_box.update_msg(text)
+                        chat_box.update_msg(text,streaming=False)
+                        st.download_button(label=":blue[点我下载整篇翻译]",data=text,file_name="response.pdf")
+                    else:
+                        chat_box.update_msg("请上传文件之后再进行回答",streaming=False)
+                    # response = ""
+                    # model = OpenAIModel(model="gpt-3.5-turbo")
                     # for i in pdfcleaner.cleaned_text:
-                        
-                    #     r = api.chat_chat(prompt + i,
-                    #                 history=history,
-                    #                 conversation_id=conversation_id,
-                    #                 model=llm_model,
-                    #                 prompt_name=prompt_template_name,
-                    #                 temperature=temperature)
-                    #     for t in r:
-                    #         if error_msg := check_error_msg(t):  # check whether error occured
-                    #             st.error(error_msg)
-                    #             break
-                    #         text += t.get("text", "")
-                    #         chat_box.update_msg(text)
-                    response = ""
-                    model = OpenAIModel(model="gpt-3.5-turbo")
-                    for i in pdfcleaner.cleaned_text:
-                        prompt = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + i
-                        response += model.make_request(prompt)[0]
-                        chat_box.update_msg(response,streaming = True)
-                    st.download_button(label=":blue[点我下载整篇翻译]",data=response,file_name="response.txt")
-                if prompt_template_name == "summary":
+                    #     prompt = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + i
+                    #     response += model.make_request(prompt)[0]
+                    #     chat_box.update_msg(response,streaming = True)
+                    # st.download_button(label=":blue[点我下载整篇翻译]",data=response,file_name="response.txt")
+                elif prompt_template_name == "summary":
                     text = ""
                     message_id = ""
                     chat_box.ai_say("正在思考...")
                     pdfcleaner = PaperCleaner(path)
-
-                    # for i in pdfcleaner.cleaned_text:
-                        
-                    #     r = api.chat_chat(prompt + i,
-                    #                 history=history,
-                    #                 conversation_id=conversation_id,
-                    #                 model=llm_model,
-                    #                 prompt_name=prompt_template_name,
-                    #                 temperature=temperature)
-                    #     for t in r:
-                    #         if error_msg := check_error_msg(t):  # check whether error occured
-                    #             st.error(error_msg)
-                    #             break
-                    #         text += t.get("text", "")
-                    #         chat_box.update_msg(text)
-                    response = ""
-                    model = OpenAIModel(model="gpt-3.5-turbo")
-                    prompt = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
-                    response += model.make_request(prompt)[0]
+                    prompt_summary = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
+                    r = api.chat_chat(prompt_summary,
+                                history=history,
+                                conversation_id=conversation_id,
+                                model=llm_model,
+                                prompt_name=prompt_template_name,
+                                temperature=temperature)
+                    for t in r:
+                        if error_msg := check_error_msg(t):  # check whether error occured
+                            st.error(error_msg)
+                            break
+                        text += t.get("text", "")
+                        chat_box.update_msg(text)
+                    chat_box.update_msg(text,streaming=False)
+                    # response = ""
+                    # model = OpenAIModel(model="gpt-3.5-turbo")
+                    # prompt = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
+                    # response += model.make_request(prompt)[0]
                     # chat_box.update_msg(response,streaming = True)
-                    chat_box.update_msg(response,streaming = False)
+                    # chat_box.update_msg(response,streaming = False)
                     # st.download_button(label=":blue[点我下载整篇翻译]",data=response,file_name="response.txt")
                 else:# if IMPORT_IMAGE<=0:
                     chat_box.ai_say("正在思考...")

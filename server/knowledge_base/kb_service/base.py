@@ -245,6 +245,7 @@ class KBService(ABC):
         """
         搜索知识库子类实自己逻辑
         """
+        print("\n\n\n\n\ndo_search\n\n\n\n\n")
         pass
 
     @abstractmethod

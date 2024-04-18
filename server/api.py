@@ -157,7 +157,7 @@ def mount_knowledge_routes(app: FastAPI):
     from server.knowledge_base.kb_doc_api import (list_files, upload_docs, delete_docs,
                                                 update_docs, download_doc, recreate_vector_store,
                                                 search_docs, DocumentWithScore, update_info)
-
+    from server.file.file_upload import upload_file
     app.post("/chat/knowledge_base_chat",
              tags=["Chat"],
              summary="与知识库对话")(knowledge_base_chat)
@@ -170,7 +170,10 @@ def mount_knowledge_routes(app: FastAPI):
     app.post("/chat/agent_chat",
              tags=["Chat"],
              summary="与agent对话")(agent_chat)
-
+    # Tag: writen by wcc
+    app.post("/uploadfiles/",
+             tags=["File"],
+             summary="上传文件用于llm_chat")(upload_file)
     # Tag: Knowledge Base Management
     app.get("/knowledge_base/list_knowledge_bases",
             tags=["Knowledge Base Management"],
@@ -275,7 +278,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='langchain-ChatGLM',
                                      description='About langchain-ChatGLM, local knowledge based ChatGLM with langchain'
                                                  ' ｜ 基于本地知识库的 ChatGLM 问答')
-    parser.add_argument("--host", type=str, default="0.0.0.0")
+    parser.add_argument("--host", type=str, default="172.26.94.25")
     parser.add_argument("--port", type=int, default=7861)
     parser.add_argument("--ssl_keyfile", type=str)
     parser.add_argument("--ssl_certfile", type=str)

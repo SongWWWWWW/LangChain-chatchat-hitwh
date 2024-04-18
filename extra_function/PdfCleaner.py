@@ -4,22 +4,35 @@ import numpy as np
 from typing import List,Tuple,Optional
 import tqdm
 import re
+import os
 RECOGNIZE_SENTENCE_LEN = 50
 NUM_PERCENT = 0.6
 class PaperCleaner:
-    def __init__(self,path: str,debug=None) -> None:
-        self.RECOGNIZE_SENTENCE_LEN = 40 #识别句子的长度,找表格描述时小于这个长度被认为是疑似表格内容
-        self.paper_path = path # pdf的path
-        self.NUM_PERCENT = 0.4 # 句子被认为是表格内容的数字比例
-        self.text :List[str] = None # paper原文本内容
-        self.cleaned_text: List[str]=None # 删除table内容后的文本内容
-        self.paper_table_name_type = 0 # 用来解决table的name的匹配问题
-        self.paper_table_position_type = 0 # 用来解决table的内容的位置问题，0：在下方，1：在上方
-        self.debug = debug
-        self.MINI_LINES = 10 # 超短句子，被认为是表格的内容
-        self.read()
-        self.find_matches()
-        self.clean_table_context()
+    def __init__(self,path: str=None,debug=None,clean=True) -> None:
+        if os.path.exists(path):
+            self.RECOGNIZE_SENTENCE_LEN = 40 #识别句子的长度,找表格描述时小于这个长度被认为是疑似表格内容
+            self.paper_path = path # pdf的path
+            self.NUM_PERCENT = 0.4 # 句子被认为是表格内容的数字比例
+            self.text :List[str] = None # paper原文本内容
+            self.cleaned_text: List[str]=None # 删除table内容后的文本内容
+            self.paper_table_name_type = 0 # 用来解决table的name的匹配问题
+            self.paper_table_position_type = 0 # 用来解决table的内容的位置问题，0：在下方，1：在上方
+            self.debug = debug
+            self.MINI_LINES = 10 # 超短句子，被认为是表格的内容
+            self.read()
+            self.find_matches()
+            if clean:
+                self.clean_table_context()
+        else:
+            self.RECOGNIZE_SENTENCE_LEN = 40 #识别句子的长度,找表格描述时小于这个长度被认为是疑似表格内容
+            self.paper_path = None # pdf的path
+            self.NUM_PERCENT = 0.4 # 句子被认为是表格内容的数字比例
+            self.text :List[str] = None # paper原文本内容
+            self.cleaned_text: List[str]=None # 删除table内容后的文本内容
+            self.paper_table_name_type = 0 # 用来解决table的name的匹配问题
+            self.paper_table_position_type = 0 # 用来解决table的内容的位置问题，0：在下方，1：在上方
+            self.debug = debug
+            self.MINI_LINES = 10 # 超短句子，被认为是表格的内容
     def read(self) -> None:
         """
         读取paper的内容，返回List[str]
@@ -576,7 +589,7 @@ def find_matches(text:str) -> int:
     print("="*100)
 if __name__ == "__main__": 
 
-    files = PaperCleaner("./3.pdf")
+    files = PaperCleaner("/home/root1/wcc/Langchain-Chatchat/transformer.pdf")
     for text in files.text:
         print(text)
 

@@ -1,7 +1,7 @@
 from langchain.text_splitter import CharacterTextSplitter
 import re
 from typing import List
-
+from extra_function.PdfCleaner import PaperCleaner 
 
 class AliTextSplitter(CharacterTextSplitter):
     def __init__(self, pdf: bool = False, **kwargs):
@@ -34,3 +34,7 @@ class AliTextSplitter(CharacterTextSplitter):
         print("pdf",'-'*100)
         print(sent_list[:5][:50])
         return sent_list
+if __name__ == "__main__":
+    pdf = PaperCleaner(path="/home/root1/wcc/Langchain-Chatchat/共产党宣言.pdf")
+    text_splitter = AliTextSplitter()
+    text_splitter.split_text(pdf.text[0])

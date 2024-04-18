@@ -60,6 +60,7 @@ class FaissKBService(KBService):
                   ) -> List[Document]:
         embed_func = EmbeddingsFunAdapter(self.embed_model)
         embeddings = embed_func.embed_query(query)
+        # 确保FAISS对象只有一个线程访问，不会在多线程访问的时候产生错乱
         with self.load_vector_store().acquire() as vs:
             docs = vs.similarity_search_with_score_by_vector(embeddings, k=top_k, score_threshold=score_threshold)
         return docs

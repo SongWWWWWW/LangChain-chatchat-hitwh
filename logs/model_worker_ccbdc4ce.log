@@ -1,0 +1,41 @@
+2024-04-12 16:21:26 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker ccbdc4ce ...
+2024-04-12 16:21:28 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                  | 0/7 [00:00<?, ?it/s]
+2024-04-12 16:21:28 | ERROR | stderr | Loading checkpoint shards:  14%|████████▎                                                 | 1/7 [00:00<00:02,  2.84it/s]
+2024-04-12 16:21:29 | ERROR | stderr | Loading checkpoint shards:  29%|████████████████▌                                         | 2/7 [00:00<00:01,  2.79it/s]
+2024-04-12 16:21:29 | ERROR | stderr | Loading checkpoint shards:  43%|████████████████████████▊                                 | 3/7 [00:01<00:01,  2.84it/s]
+2024-04-12 16:21:29 | ERROR | stderr | Loading checkpoint shards:  57%|█████████████████████████████████▏                        | 4/7 [00:01<00:01,  2.82it/s]
+2024-04-12 16:21:30 | ERROR | stderr | Loading checkpoint shards:  71%|█████████████████████████████████████████▍                | 5/7 [00:01<00:00,  2.81it/s]
+2024-04-12 16:21:30 | ERROR | stderr | Loading checkpoint shards:  86%|█████████████████████████████████████████████████▋        | 6/7 [00:02<00:00,  2.87it/s]
+2024-04-12 16:21:30 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████| 7/7 [00:02<00:00,  3.26it/s]
+2024-04-12 16:21:30 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████| 7/7 [00:02<00:00,  3.00it/s]
+2024-04-12 16:21:30 | ERROR | stderr | 
+2024-04-12 16:21:32 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2024-04-12 16:21:32 | ERROR | stderr | Traceback (most recent call last):
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2024-04-12 16:21:32 | ERROR | stderr |     self.run()
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 108, in run
+2024-04-12 16:21:32 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 386, in run_model_worker
+2024-04-12 16:21:32 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 214, in create_model_worker_app
+2024-04-12 16:21:32 | ERROR | stderr |     worker = ModelWorker(
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2024-04-12 16:21:32 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 337, in load_model
+2024-04-12 16:21:32 | ERROR | stderr |     model.to(device)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2460, in to
+2024-04-12 16:21:32 | ERROR | stderr |     return super().to(*args, **kwargs)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
+2024-04-12 16:21:32 | ERROR | stderr |     return self._apply(convert)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+2024-04-12 16:21:32 | ERROR | stderr |     module._apply(fn)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+2024-04-12 16:21:32 | ERROR | stderr |     module._apply(fn)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+2024-04-12 16:21:32 | ERROR | stderr |     module._apply(fn)
+2024-04-12 16:21:32 | ERROR | stderr |   [Previous line repeated 3 more times]
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
+2024-04-12 16:21:32 | ERROR | stderr |     param_applied = fn(param)
+2024-04-12 16:21:32 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
+2024-04-12 16:21:32 | ERROR | stderr |     return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+2024-04-12 16:21:32 | ERROR | stderr | torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 214.00 MiB. GPU 0 has a total capacty of 44.55 GiB of which 158.50 MiB is free. Process 2949651 has 22.12 GiB memory in use. Process 2991022 has 11.91 GiB memory in use. Including non-PyTorch memory, this process has 10.34 GiB memory in use. Of the allocated memory 10.08 GiB is allocated by PyTorch, and 1.36 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

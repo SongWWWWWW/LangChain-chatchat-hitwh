@@ -44,7 +44,7 @@ PROMPT_TEMPLATES = {
             '4. 翻译目标语言为中文'
             '如果没有给出相应的论文内容，请提醒用户上传文件'
             '以下为论文内容，请开始进行翻译:\n'
-            '用户输入：{input}',
+            '用户输入：{{ input }}',
 
         "summary":
             '1. Mark the title of the paper (with Chinese translation)\n'
@@ -71,7 +71,7 @@ PROMPT_TEMPLATES = {
             'Be sure to use Chinese answers (proper nouns need to be marked in English), statements as concise and academic as possible,\n'
             'do not have too much repetitive information, numerical values using the original numbers.\n'
             'Artical content is: \n'
-            '{input}',
+            '{{ input }}',
         "SWOT分析":
             '你是SWOT分析方面的专家，你能根据给定的信息进行详细而又准确的分析。'
             '请提供SWOT分析的全面内容，确保包括以下方面：\n'
