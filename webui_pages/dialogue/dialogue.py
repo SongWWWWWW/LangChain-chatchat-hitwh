@@ -14,7 +14,7 @@ from typing import List, Dict
 from PIL import Image
 global NAME_EXCEL
 from extra_function.translator import OpenAIModel,PaperCleaner,PDFTranslator
-NAME_EXCEL = ""
+NAME_EXCEL = set()
 chat_box = ChatBox(
     assistant_avatar=os.path.join(
         "img",
@@ -305,14 +305,16 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
             history = get_messages_history(history_len)
             chat_box.user_say(prompt)
             if dialogue_mode == "LLM 对话":
-                
-                path = "/home/root1/wcc/Langchain-Chatchat/save_excel/" + NAME_EXCEL
+                path = {}
+                if NAME_EXCEL:
+                    for i in range(NAME_EXCEL):
+                        path.append("/home/root1/wcc/Langchain-Chatchat/save_excel/" + NAME_EXCEL[i])
                 if prompt_template_name == "translator":
                     text = ""
                     message_id = ""
                     chat_box.ai_say("正在思考...")
                     if NAME_EXCEL:
-                        pdfcleaner = PaperCleaner(path)
+                        pdfcleaner = PaperCleaner(path[0])
                         for i in pdfcleaner.cleaned_text:
                             temporary_prompt = prompt + "\n" + i
                             print(temporary_prompt)
@@ -343,6 +345,26 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
                     text = ""
                     message_id = ""
                     chat_box.ai_say("正在思考...")
+                    pdfcleaner = PaperCleaner(path[0])
+                    prompt_summary = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
+                    r = api.chat_chat(prompt_summary,
+                                history=history,
+                                conversation_id=conversation_id,
+                                model=llm_model,
+                                prompt_name=prompt_template_name,
+                                temperature=temperature)
+                    for t in r:
+                        if error_msg := check_error_msg(t):  # check whether error occured
+                            st.error(error_msg)
+                            break
+                        text += t.get("text", "")
+                        chat_box.update_msg(text)
+                    chat_box.update_msg(text,streaming=False)
+                elif prompt_template_name == "文献综述":
+                    history = []
+                    text = ""
+                    message_id = ""
+                    chat_box.ai_say("正在思考...")
                     pdfcleaner = PaperCleaner(path)
                     prompt_summary = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
                     r = api.chat_chat(prompt_summary,
@@ -358,13 +380,6 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
                         text += t.get("text", "")
                         chat_box.update_msg(text)
                     chat_box.update_msg(text,streaming=False)
-                    # response = ""
-                    # model = OpenAIModel(model="gpt-3.5-turbo")
-                    # prompt = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
-                    # response += model.make_request(prompt)[0]
-                    # chat_box.update_msg(response,streaming = True)
-                    # chat_box.update_msg(response,streaming = False)
-                    # st.download_button(label=":blue[点我下载整篇翻译]",data=response,file_name="response.txt")
                 else:# if IMPORT_IMAGE<=0:
                     chat_box.ai_say("正在思考...")
                     text = ""

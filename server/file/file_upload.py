@@ -4,6 +4,7 @@ from typing import List
 
 async def upload_file(files: List[UploadFile] = ...):
     # 使用 os.path.expanduser 来正确解析用户主目录的路径
+    print(files[0])
     if len(files) > 1:
         return {"false":"设定可上传文件数量为1,请不要超过此长度文件数量"}
     local_path = os.path.expanduser("~/wcc/Langchain-Chatchat/save_pdf/")

@@ -24,6 +24,9 @@ from server.llm_api import (list_running_models, list_config_models,
 from server.utils import (BaseResponse, ListResponse, FastAPI, MakeFastAPIOffline,
                           get_server_configs, get_prompt_template)
 from typing import List, Literal
+import shutil
+from fastapi.responses import JSONResponse
+from fastapi import File,UploadFile,Form
 
 nltk.data.path = [NLTK_DATA_PATH] + nltk.data.path
 
@@ -116,7 +119,20 @@ def mount_app_routes(app: FastAPI, run_mode: str = None):
              tags=["LLM Model Management"],
              summary="切换指定的LLM模型（Model Worker)",
              )(change_llm_model)
-
+    # 文件相关接口
+    # @app.post("/uploadfile",
+    #           tags=["File"],
+    #           summary="上传文件，以供对话")
+    # async def upload_file(files: List[UploadFile] = File(...)):
+    #     try:
+    #         upload_file = []
+    #         for file in files:
+    #             with open("~/wcc/Langchain-Chatchat/save_pdf/"+file.filename,"wb") as buffer:
+    #                 shutil.copyfileobj(file.file,buffer)
+    #             upload_file.append({"filename":file.filename})
+    #         return JSONResponse(status_code=200, content={"message": "Files upload successfully","uploaded_files":upload_file})
+    #     except Exception as e:
+    #         return JSONResponse(status_code=500,content={"message": f"Failed to upload files: {str(e)}"})
     # 服务器相关接口
     app.post("/server/configs",
              tags=["Server State"],
