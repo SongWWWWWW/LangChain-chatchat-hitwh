@@ -174,6 +174,13 @@ def mount_knowledge_routes(app: FastAPI):
                                                 update_docs, download_doc, recreate_vector_store,
                                                 search_docs, DocumentWithScore, update_info)
     from server.file.file_upload import upload_file
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
     app.post("/chat/knowledge_base_chat",
              tags=["Chat"],
              summary="与知识库对话")(knowledge_base_chat)
