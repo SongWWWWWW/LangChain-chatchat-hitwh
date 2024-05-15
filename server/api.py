@@ -200,7 +200,7 @@ def mount_knowledge_routes(app: FastAPI):
     # Tag: Knowledge Base Management
     app.get("/knowledge_base/list_knowledge_bases",
             tags=["Knowledge Base Management"],
-            response_model=ListResponse,
+            response_model=BaseResponse,
             summary="获取知识库列表")(list_kbs)
 
     app.post("/knowledge_base/create_knowledge_base",
@@ -217,7 +217,7 @@ def mount_knowledge_routes(app: FastAPI):
 
     app.get("/knowledge_base/list_files",
             tags=["Knowledge Base Management"],
-            response_model=ListResponse,
+            response_model=BaseResponse,
             summary="获取知识库内的文件列表"
             )(list_files)
 

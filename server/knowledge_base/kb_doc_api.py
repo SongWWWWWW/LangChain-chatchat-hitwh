@@ -41,7 +41,7 @@ def search_docs(
 
 def list_files(
         knowledge_base_name: str
-) -> ListResponse:
+) -> BaseResponse:
     if not validate_kb_name(knowledge_base_name):
         return ListResponse(code=403, msg="Don't attack me", data=[])
 
@@ -51,7 +51,7 @@ def list_files(
         return ListResponse(code=404, msg=f"未找到知识库 {knowledge_base_name}", data=[])
     else:
         all_doc_names = kb.list_files()
-        return ListResponse(data=all_doc_names)
+        return BaseResponse(data=all_doc_names)
 
 
 def _save_files_in_thread(files: List[UploadFile],

@@ -9,7 +9,7 @@ from fastapi import Body
 
 def list_kbs():
     # Get List of Knowledge Base
-    return ListResponse(data=list_kbs_from_db())
+    return BaseResponse(data=list_kbs_from_db())
 
 
 def create_kb(knowledge_base_name: str = Body(..., examples=["samples"]),
