@@ -169,10 +169,10 @@ def mount_knowledge_routes(app: FastAPI):
     from server.chat.knowledge_base_chat import knowledge_base_chat
     from server.chat.file_chat import upload_temp_docs, file_chat
     from server.chat.agent_chat import agent_chat
-    from server.knowledge_base.kb_api import list_kbs, create_kb, delete_kb
+    from server.knowledge_base.kb_api import list_kbs, create_kb, delete_kb, list_kbs_all
     from server.knowledge_base.kb_doc_api import (list_files, upload_docs, delete_docs,
                                                 update_docs, download_doc, recreate_vector_store,
-                                                search_docs, DocumentWithScore, update_info)
+                                                search_docs, DocumentWithScore, update_info,list_files_all)
     from server.file.file_upload import upload_file
     app.add_middleware(
         CORSMiddleware,
@@ -202,7 +202,10 @@ def mount_knowledge_routes(app: FastAPI):
             tags=["Knowledge Base Management"],
             response_model=BaseResponse,
             summary="获取知识库列表")(list_kbs)
-
+    app.get("/knowledge_base/list_knowledge_bases/all",
+            tags=["Knowledge Base Management"],
+            response_model=BaseResponse,
+            summary="获取知识库列表和其中详细信息")(list_kbs_all)
     app.post("/knowledge_base/create_knowledge_base",
              tags=["Knowledge Base Management"],
              response_model=BaseResponse,
@@ -220,7 +223,11 @@ def mount_knowledge_routes(app: FastAPI):
             response_model=BaseResponse,
             summary="获取知识库内的文件列表"
             )(list_files)
-
+    app.get("/knowledge_base/list_files/all",
+            tags=["Knowledge Base Management"],
+            response_model=BaseResponse,
+            summary="获取知识库内的文件列表及其详细信息"
+            )(list_files_all)
     app.post("/knowledge_base/search_docs",
              tags=["Knowledge Base Management"],
              response_model=List[DocumentWithScore],

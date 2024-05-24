@@ -2,15 +2,17 @@ import urllib
 from server.utils import BaseResponse, ListResponse
 from server.knowledge_base.utils import validate_kb_name
 from server.knowledge_base.kb_service.base import KBServiceFactory
-from server.db.repository.knowledge_base_repository import list_kbs_from_db
+from server.db.repository.knowledge_base_repository import list_kbs_from_db, list_kbs_from_db_all
 from configs import EMBEDDING_MODEL, logger, log_verbose
 from fastapi import Body
 
 
 def list_kbs():
     # Get List of Knowledge Base
-    return BaseResponse(data=list_kbs_from_db())
+    return ListResponse(data=list_kbs_from_db())
 
+def list_kbs_all():
+    return BaseResponse(data=list_kbs_from_db_all())
 
 def create_kb(knowledge_base_name: str = Body(..., examples=["samples"]),
             vector_store_type: str = Body("faiss"),

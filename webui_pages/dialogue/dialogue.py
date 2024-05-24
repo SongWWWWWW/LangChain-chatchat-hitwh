@@ -305,10 +305,11 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
             history = get_messages_history(history_len)
             chat_box.user_say(prompt)
             if dialogue_mode == "LLM 对话":
-                path = {}
+                path = set()
                 if NAME_EXCEL:
-                    for i in range(NAME_EXCEL):
-                        path.append("/home/root1/wcc/Langchain-Chatchat/save_excel/" + NAME_EXCEL[i])
+                    for i in NAME_EXCEL:
+                        path.add("/home/root1/wcc/Langchain-Chatchat/save_excel/" + i)
+                print(path)
                 if prompt_template_name == "translator":
                     text = ""
                     message_id = ""
@@ -365,21 +366,40 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
                     text = ""
                     message_id = ""
                     chat_box.ai_say("正在思考...")
-                    pdfcleaner = PaperCleaner(path)
-                    prompt_summary = PROMPT_TEMPLATES["llm_chat"][prompt_template_name] + '\n' + pdfcleaner.cleaned_text[0] + "\n" + pdfcleaner.cleaned_text[1]
-                    r = api.chat_chat(prompt_summary,
-                                history=history,
-                                conversation_id=conversation_id,
-                                model=llm_model,
-                                prompt_name=prompt_template_name,
-                                temperature=temperature)
+                    text = ""
+                    for i,path_ in enumerate(path):
+                        text += f"\n\n\n第{i+1}篇总结：\n"
+                        pdfcleaner = PaperCleaner(path_)
+                        print(type(PROMPT_TEMPLATES["llm_chat"]["summary_paper"]))
+                        print(pdfcleaner.chunk_paper[0])
+                        prompt_summary = '\n' + pdfcleaner.chunk_paper[0][1] + "\n" + pdfcleaner.chunk_paper[1][1] + "\n" + pdfcleaner.chunk_paper[2][1]
+                        r = api.chat_chat(prompt_summary,
+                                    history=None,
+                                    conversation_id=conversation_id,
+                                    model=llm_model,
+                                    prompt_name="summary_paper",
+                                    temperature=temperature)
+                        for t in r:
+                            if error_msg := check_error_msg(t):  # check whether error occured
+                                st.error(error_msg)
+                                break
+                            text += t.get("text", "")
+                            chat_box.update_msg(text)
+                    prompt = text
+                    summary = ""
+                    r = api.chat_chat(prompt,
+                                    history=history,
+                                    conversation_id=conversation_id,
+                                    model=llm_model,
+                                    prompt_name=prompt_template_name,
+                                    temperature=temperature)
                     for t in r:
                         if error_msg := check_error_msg(t):  # check whether error occured
                             st.error(error_msg)
                             break
-                        text += t.get("text", "")
-                        chat_box.update_msg(text)
-                    chat_box.update_msg(text,streaming=False)
+                        summary += t.get("text", "")
+                        chat_box.update_msg(summary)
+                    chat_box.update_msg(summary, streaming=False)
                 else:# if IMPORT_IMAGE<=0:
                     chat_box.ai_say("正在思考...")
                     text = ""
@@ -403,7 +423,7 @@ def dialogue_page(api: ApiRequest, is_lite: bool = False):
                     #image_path = "/home/root1/wcc/Langchain-Chatchat/coding/"+file_name_without_extension+".png"
                     chat_box.update_msg(text, streaming=False, metadata=metadata)  # 更新最终的字符串，去除光标
                     #st.image(image_path, caption=" LLM's Image", use_column_width=True)
-                    print("text\n"*10+text)
+                    # print("text\n"*10+text)
                     chat_box.show_feedback(**feedback_kwargs,
                                         key=message_id,
                                         on_submit=on_feedback,

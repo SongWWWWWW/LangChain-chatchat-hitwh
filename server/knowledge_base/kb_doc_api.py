@@ -52,7 +52,19 @@ def list_files(
     else:
         all_doc_names = kb.list_files()
         return BaseResponse(data=all_doc_names)
+def list_files_all(
+        knowledge_base_name: str
+) -> BaseResponse:
+    if not validate_kb_name(knowledge_base_name):
+        return ListResponse(code=403, msg="Don't attack me", data=[])
 
+    knowledge_base_name = urllib.parse.unquote(knowledge_base_name)
+    kb = KBServiceFactory.get_service_by_name(knowledge_base_name)
+    if kb is None:
+        return ListResponse(code=404, msg=f"未找到知识库 {knowledge_base_name}", data=[])
+    else:
+        all_doc_names = kb.list_files_all()
+        return BaseResponse(data=all_doc_names)
 
 def _save_files_in_thread(files: List[UploadFile],
                           knowledge_base_name: str,

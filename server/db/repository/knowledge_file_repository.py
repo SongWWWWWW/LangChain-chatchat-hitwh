@@ -74,11 +74,14 @@ def count_files_from_db(session, kb_name: str) -> int:
 @with_session
 def list_files_from_db(session, kb_name):
     files = session.query(KnowledgeFileModel).filter_by(kb_name=kb_name).all()
-    for f in files:
-        print(f)
-    docs = [[f.file_name,f.document_loader_name,f.text_splitter_name,f.file_version,f.create_time] for f in files]
+    docs = [f.file_name for f in files]
     return docs
 
+@with_session
+def list_files_from_db_all(session,kb_name):
+    files = session.query(KnowledgeFileModel).filter_by(kb_name=kb_name).all()
+    docs = [[f.file_name,f.document_loader_name,f.text_splitter_name,f.file_version,f.create_time] for f in files]
+    return docs
 
 @with_session
 def add_file_to_db(session,

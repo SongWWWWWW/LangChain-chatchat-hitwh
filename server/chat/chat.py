@@ -39,7 +39,7 @@ async def chat(query: str = Body(..., description="用户输入", examples=["恼
         callback = AsyncIteratorCallbackHandler()
         callbacks = [callback]
         memory = None
-        print("query: ",query)
+        print("\033[31mquery\033[0m: ",query)
         if conversation_id:
             message_id = add_message_to_db(chat_type="llm_chat", query=query, conversation_id=conversation_id)
             # 负责保存llm response到message db
@@ -47,7 +47,7 @@ async def chat(query: str = Body(..., description="用户输入", examples=["恼
                                                                 chat_type="llm_chat",
                                                                 query=query)
             callbacks.append(conversation_callback)
-
+        print("\033[31m 1 \033[0m")
         if isinstance(max_tokens, int) and max_tokens <= 0:
             max_tokens = None
 
@@ -57,6 +57,7 @@ async def chat(query: str = Body(..., description="用户输入", examples=["恼
             max_tokens=max_tokens,
             callbacks=callbacks,
         )
+        print("\033[31m 2 \033[0m")
 
         if history: # 优先使用前端传入的历史消息
             history = [History.from_data(h) for h in history]
@@ -76,6 +77,10 @@ async def chat(query: str = Body(..., description="用户输入", examples=["恼
             prompt_template = get_prompt_template("llm_chat", prompt_name)
             input_msg = History(role="user", content=prompt_template).to_msg_template(False)
             chat_prompt = ChatPromptTemplate.from_messages([input_msg])
+            if prompt_name == "summary_paper" or prompt_name == "文献综述":
+                chat_prompt = ChatPromptTemplate.from_messages([prompt_template+query.replace("{","{{").replace("}","}}")])
+        print("\033[31mchat_prompt:\033[0m\n",chat_prompt)
+        print("\033[memory:\033[0m\n",memory)
 
         chain = LLMChain(prompt=chat_prompt, llm=model, memory=memory)
 

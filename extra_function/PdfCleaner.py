@@ -559,7 +559,8 @@ class PaperCleaner:
                         # self.title_tree = self.title_tree.sons[0]
                         self.logger.info(f"paper标题模式确认，{i}")
                         break
-                    elif self.is_num(texts[index_i-1][0]):
+                    
+                    elif index_i != 0 and self.is_num(texts[index_i-1][0]):
                         self.title_pattern = 2
                         # 1
                         # Introduction
@@ -884,22 +885,22 @@ def find_matches(text:str) -> int:
 
         #  print(text[match.start():match.end()])
     print("="*100)
-if __name__ == "__main__": 
+# if __name__ == "__main__": 
 
-    files = PaperCleaner("./5.pdf")
-    # files.search_title()
-    # tree = TitleTree(value=[1])
-    # tree1 = TitleTree(value=[1,1],parent=tree)
-    # tree2 = TitleTree(value=[1,1,1],parent=tree1)
-    # files.title_queue(tree2)
-    # files.title_pattern_1()
-    # with open("log.txt",'w') as f:
-    #     for text in files.text:
-    #         # print(text)
-    #         f.write(text)
-    for i in files.chunk_paper:
-        print("-"*10)
-        print(i[1])
+    # files = PaperCleaner("./5.pdf")
+    # # files.search_title()
+    # # tree = TitleTree(value=[1])
+    # # tree1 = TitleTree(value=[1,1],parent=tree)
+    # # tree2 = TitleTree(value=[1,1,1],parent=tree1)
+    # # files.title_queue(tree2)
+    # # files.title_pattern_1()
+    # # with open("log.txt",'w') as f:
+    # #     for text in files.text:
+    # #         # print(text)
+    # #         f.write(text)
+    # for i in files.chunk_paper:
+    #     print("-"*10)
+    #     print(i[1])
 
 
 # 对表格的内容清除还不到位

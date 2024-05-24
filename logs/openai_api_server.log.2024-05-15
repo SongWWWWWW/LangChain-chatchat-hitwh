@@ -1,0 +1,12 @@
+2024-05-17 17:31:55 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m1630323[0m]
+2024-05-17 17:31:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-05-17 17:31:55 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-05-17 17:31:55 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('172.26.94.25', 20000): address already in use
+2024-05-17 17:31:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-05-17 17:31:55 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-05-17 17:33:11 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m1630832[0m]
+2024-05-17 17:33:11 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-05-17 17:33:11 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-05-17 17:33:11 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('172.26.94.25', 20000): address already in use
+2024-05-17 17:33:11 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-05-17 17:33:11 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.

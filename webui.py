@@ -78,13 +78,13 @@ if __name__ == "__main__":
                 local_path = "/home/root1/wcc/Langchain-Chatchat/save_excel"
                 os.makedirs(local_path,exist_ok=True)
                 for i in file_uploader:
-                    filename = file_uploader.name
+                    filename = i.name
 
                     dialogue.NAME_EXCEL.add(filename)
                     print(dialogue.NAME_EXCEL)
                     with open(os.path.join(local_path, filename),"wb") as f:
-                        f.write(file_uploader.read())
-                    st.success(f"文件成功保存到 {local_path}/{filename} ")
+                        f.write(i.read())
+                    st.success(f"文件成功保存 ")
                 
                 # Excel_path = os.path.join(local_path, filename)
                 # last_dot_index = Excel_path.rfind(".")
