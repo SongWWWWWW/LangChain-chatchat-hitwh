@@ -1,0 +1,2 @@
+2024-05-17 17:34:01 | INFO | stdout | [32mINFO[0m:     172.26.94.25:43342 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-05-17 18:20:52 | INFO | stdout | [32mINFO[0m:     172.26.94.25:56722 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m

@@ -1,0 +1,60 @@
+2023-12-30 17:01:17 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker 1bce0032 ...
+2023-12-30 17:01:20 | ERROR | stderr | Downloading shards:   0%|                                                                         | 0/7 [00:00<?, ?it/s]
+2023-12-30 17:01:23 | ERROR | stderr | Downloading shards:  14%|█████████▎                                                       | 1/7 [00:03<00:21,  3.55s/it]
+2023-12-30 17:01:23 | ERROR | stderr | 
+2023-12-30 17:01:23 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2023-12-30 17:01:23 | ERROR | stderr | urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+2023-12-30 17:01:23 | ERROR | stderr | 
+2023-12-30 17:01:23 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2023-12-30 17:01:23 | ERROR | stderr | 
+2023-12-30 17:01:23 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+2023-12-30 17:01:23 | ERROR | stderr |     resp = conn.urlopen(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+2023-12-30 17:01:23 | ERROR | stderr |     retries = retries.increment(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+2023-12-30 17:01:23 | ERROR | stderr |     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2023-12-30 17:01:23 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs-us-1.huggingface.co', port=443): Max retries exceeded with url: /repos/01/5a/015a4eda6314fbcdb0aecc00e73f604e0f398b10ef843cf3e7bfcf8d0b9c1d7d/f88d7f69a3940711b87308eb20dd0544df22aff81134fa0d5160d3c859f5d321?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00002-of-00007.safetensors%3B+filename%3D%22model-00002-of-00007.safetensors%22%3B&Expires=1704186080&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNDE4NjA4MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzAxLzVhLzAxNWE0ZWRhNjMxNGZiY2RiMGFlY2MwMGU3M2Y2MDRlMGYzOThiMTBlZjg0M2NmM2U3YmZjZjhkMGI5YzFkN2QvZjg4ZDdmNjlhMzk0MDcxMWI4NzMwOGViMjBkZDA1NDRkZjIyYWZmODExMzRmYTBkNTE2MGQzYzg1OWY1ZDMyMT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=mEobFqPYfG8ShTT6Pc551dTCegw233JbdlQCHAuoH2vxJMWerkFD0KGnN3eGyhtpMhvzUk1JovLgnr9xDIWeMsb6Wmp8ZVziBGXTEmR7tZbOCAVE1Yk0gxrbhdxbbcBdBeslA72XQ0RUCpd2weMVY9F804RBMb-Gi5CJhu9~TuNNe1N8pwRshBh4XguIV5LmIRGolxKzao-iLus9oo67W4IAuBUdp~~HnWPDguRDhnJsEngpYEhCq7unTQxn9YuUQ4EQSkiWvJ3O7dEYzyCEufurepntyeXeQiSdacWKPg~fwTNYnOQ8RWF~KI0Ua88FHWcnXI3ms6gT7ZMufEp6jg__&Key-Pair-Id=KCD77M1F0VK2B (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
+2023-12-30 17:01:23 | ERROR | stderr | 
+2023-12-30 17:01:23 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2023-12-30 17:01:23 | ERROR | stderr | 
+2023-12-30 17:01:23 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-12-30 17:01:23 | ERROR | stderr |     self.run()
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-12-30 17:01:23 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 386, in run_model_worker
+2023-12-30 17:01:23 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 214, in create_model_worker_app
+2023-12-30 17:01:23 | ERROR | stderr |     worker = ModelWorker(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2023-12-30 17:01:23 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 323, in load_model
+2023-12-30 17:01:23 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 784, in load_model
+2023-12-30 17:01:23 | ERROR | stderr |     model = AutoModel.from_pretrained(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 561, in from_pretrained
+2023-12-30 17:01:23 | ERROR | stderr |     return model_class.from_pretrained(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3351, in from_pretrained
+2023-12-30 17:01:23 | ERROR | stderr |     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/utils/hub.py", line 1017, in get_checkpoint_shard_files
+2023-12-30 17:01:23 | ERROR | stderr |     cached_filename = cached_file(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/utils/hub.py", line 389, in cached_file
+2023-12-30 17:01:23 | ERROR | stderr |     resolved_file = hf_hub_download(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2023-12-30 17:01:23 | ERROR | stderr |     return fn(*args, **kwargs)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+2023-12-30 17:01:23 | ERROR | stderr |     http_get(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 468, in http_get
+2023-12-30 17:01:23 | ERROR | stderr |     r = _request_wrapper(
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+2023-12-30 17:01:23 | ERROR | stderr |     response = get_session().request(method=method, url=url, **params)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+2023-12-30 17:01:23 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+2023-12-30 17:01:23 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+2023-12-30 17:01:23 | ERROR | stderr |     return super().send(request, *args, **kwargs)
+2023-12-30 17:01:23 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/adapters.py", line 517, in send
+2023-12-30 17:01:23 | ERROR | stderr |     raise SSLError(e, request=request)
+2023-12-30 17:01:23 | ERROR | stderr | requests.exceptions.SSLError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs-us-1.huggingface.co', port=443): Max retries exceeded with url: /repos/01/5a/015a4eda6314fbcdb0aecc00e73f604e0f398b10ef843cf3e7bfcf8d0b9c1d7d/f88d7f69a3940711b87308eb20dd0544df22aff81134fa0d5160d3c859f5d321?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model-00002-of-00007.safetensors%3B+filename%3D%22model-00002-of-00007.safetensors%22%3B&Expires=1704186080&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwNDE4NjA4MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zLzAxLzVhLzAxNWE0ZWRhNjMxNGZiY2RiMGFlY2MwMGU3M2Y2MDRlMGYzOThiMTBlZjg0M2NmM2U3YmZjZjhkMGI5YzFkN2QvZjg4ZDdmNjlhMzk0MDcxMWI4NzMwOGViMjBkZDA1NDRkZjIyYWZmODExMzRmYTBkNTE2MGQzYzg1OWY1ZDMyMT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=mEobFqPYfG8ShTT6Pc551dTCegw233JbdlQCHAuoH2vxJMWerkFD0KGnN3eGyhtpMhvzUk1JovLgnr9xDIWeMsb6Wmp8ZVziBGXTEmR7tZbOCAVE1Yk0gxrbhdxbbcBdBeslA72XQ0RUCpd2weMVY9F804RBMb-Gi5CJhu9~TuNNe1N8pwRshBh4XguIV5LmIRGolxKzao-iLus9oo67W4IAuBUdp~~HnWPDguRDhnJsEngpYEhCq7unTQxn9YuUQ4EQSkiWvJ3O7dEYzyCEufurepntyeXeQiSdacWKPg~fwTNYnOQ8RWF~KI0Ua88FHWcnXI3ms6gT7ZMufEp6jg__&Key-Pair-Id=KCD77M1F0VK2B (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))"), '(Request ID: a6f44882-3afc-4538-9749-820147a38f20)')

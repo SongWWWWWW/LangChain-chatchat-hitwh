@@ -1,0 +1,68 @@
+2023-12-30 17:33:22 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker 7c90b98e ...
+2023-12-30 17:33:25 | ERROR | stderr | Downloading shards:   0%|                                                                         | 0/7 [00:00<?, ?it/s]
+2023-12-30 17:33:26 | ERROR | stderr | 
+2023-12-30 17:33:26 | ERROR | stderr | model-00002-of-00007.safetensors:   0%|                                                     | 0.00/1.97G [00:00<?, ?B/s]
+2023-12-30 17:33:26 | ERROR | stderr | [A
+2023-12-30 17:33:33 | ERROR | stderr | model-00002-of-00007.safetensors:   0%|                                                     | 0.00/1.97G [00:06<?, ?B/s]
+2023-12-30 17:33:33 | ERROR | stderr | 
+2023-12-30 17:33:33 | ERROR | stderr | Downloading shards:  14%|█████████▎                                                       | 1/7 [00:08<00:48,  8.02s/it]
+2023-12-30 17:33:33 | ERROR | stderr | 
+2023-12-30 17:33:33 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2023-12-30 17:33:33 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/response.py", line 712, in _error_catcher
+2023-12-30 17:33:33 | ERROR | stderr |     yield
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/response.py", line 833, in _raw_read
+2023-12-30 17:33:33 | ERROR | stderr |     raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+2023-12-30 17:33:33 | ERROR | stderr | urllib3.exceptions.IncompleteRead: IncompleteRead(7094897 bytes read, 1961196991 more expected)
+2023-12-30 17:33:33 | ERROR | stderr | 
+2023-12-30 17:33:33 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2023-12-30 17:33:33 | ERROR | stderr | 
+2023-12-30 17:33:33 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/models.py", line 816, in generate
+2023-12-30 17:33:33 | ERROR | stderr |     yield from self.raw.stream(chunk_size, decode_content=True)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/response.py", line 934, in stream
+2023-12-30 17:33:33 | ERROR | stderr |     data = self.read(amt=amt, decode_content=decode_content)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/response.py", line 905, in read
+2023-12-30 17:33:33 | ERROR | stderr |     data = self._raw_read(amt)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/response.py", line 811, in _raw_read
+2023-12-30 17:33:33 | ERROR | stderr |     with self._error_catcher():
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/contextlib.py", line 153, in __exit__
+2023-12-30 17:33:33 | ERROR | stderr |     self.gen.throw(typ, value, traceback)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/response.py", line 729, in _error_catcher
+2023-12-30 17:33:33 | ERROR | stderr |     raise ProtocolError(f"Connection broken: {e!r}", e) from e
+2023-12-30 17:33:33 | ERROR | stderr | urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(7094897 bytes read, 1961196991 more expected)', IncompleteRead(7094897 bytes read, 1961196991 more expected))
+2023-12-30 17:33:33 | ERROR | stderr | 
+2023-12-30 17:33:33 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2023-12-30 17:33:33 | ERROR | stderr | 
+2023-12-30 17:33:33 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-12-30 17:33:33 | ERROR | stderr |     self.run()
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-12-30 17:33:33 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 386, in run_model_worker
+2023-12-30 17:33:33 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 214, in create_model_worker_app
+2023-12-30 17:33:33 | ERROR | stderr |     worker = ModelWorker(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2023-12-30 17:33:33 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 323, in load_model
+2023-12-30 17:33:33 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 784, in load_model
+2023-12-30 17:33:33 | ERROR | stderr |     model = AutoModel.from_pretrained(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 561, in from_pretrained
+2023-12-30 17:33:33 | ERROR | stderr |     return model_class.from_pretrained(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3351, in from_pretrained
+2023-12-30 17:33:33 | ERROR | stderr |     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/utils/hub.py", line 1017, in get_checkpoint_shard_files
+2023-12-30 17:33:33 | ERROR | stderr |     cached_filename = cached_file(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/utils/hub.py", line 389, in cached_file
+2023-12-30 17:33:33 | ERROR | stderr |     resolved_file = hf_hub_download(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2023-12-30 17:33:33 | ERROR | stderr |     return fn(*args, **kwargs)
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+2023-12-30 17:33:33 | ERROR | stderr |     http_get(
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+2023-12-30 17:33:33 | ERROR | stderr |     for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+2023-12-30 17:33:33 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/models.py", line 818, in generate
+2023-12-30 17:33:33 | ERROR | stderr |     raise ChunkedEncodingError(e)
+2023-12-30 17:33:33 | ERROR | stderr | requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(7094897 bytes read, 1961196991 more expected)', IncompleteRead(7094897 bytes read, 1961196991 more expected))

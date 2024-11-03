@@ -1,0 +1,99 @@
+2023-12-30 16:55:05 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker e65ec471 ...
+2023-12-30 16:55:07 | ERROR | stderr | Downloading shards:   0%|                                                                         | 0/7 [00:00<?, ?it/s]
+2023-12-30 16:55:13 | ERROR | stderr | Downloading shards:  14%|█████████▎                                                       | 1/7 [00:05<00:32,  5.41s/it]
+2023-12-30 16:55:13 | ERROR | stderr | 
+2023-12-30 16:55:13 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2023-12-30 16:55:13 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connectionpool.py", line 776, in urlopen
+2023-12-30 16:55:13 | ERROR | stderr |     self._prepare_proxy(conn)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1045, in _prepare_proxy
+2023-12-30 16:55:13 | ERROR | stderr |     conn.connect()
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connection.py", line 642, in connect
+2023-12-30 16:55:13 | ERROR | stderr |     sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+2023-12-30 16:55:13 | ERROR | stderr |     ssl_sock = ssl_wrap_socket(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+2023-12-30 16:55:13 | ERROR | stderr |     ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+2023-12-30 16:55:13 | ERROR | stderr |     return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/ssl.py", line 513, in wrap_socket
+2023-12-30 16:55:13 | ERROR | stderr |     return self.sslsocket_class._create(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/ssl.py", line 1071, in _create
+2023-12-30 16:55:13 | ERROR | stderr |     self.do_handshake()
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/ssl.py", line 1342, in do_handshake
+2023-12-30 16:55:13 | ERROR | stderr |     self._sslobj.do_handshake()
+2023-12-30 16:55:13 | ERROR | stderr | ConnectionResetError: [Errno 104] Connection reset by peer
+2023-12-30 16:55:13 | ERROR | stderr | 
+2023-12-30 16:55:13 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2023-12-30 16:55:13 | ERROR | stderr | 
+2023-12-30 16:55:13 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+2023-12-30 16:55:13 | ERROR | stderr |     resp = conn.urlopen(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+2023-12-30 16:55:13 | ERROR | stderr |     retries = retries.increment(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/retry.py", line 470, in increment
+2023-12-30 16:55:13 | ERROR | stderr |     raise reraise(type(error), error, _stacktrace)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+2023-12-30 16:55:13 | ERROR | stderr |     raise value.with_traceback(tb)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connectionpool.py", line 776, in urlopen
+2023-12-30 16:55:13 | ERROR | stderr |     self._prepare_proxy(conn)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1045, in _prepare_proxy
+2023-12-30 16:55:13 | ERROR | stderr |     conn.connect()
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connection.py", line 642, in connect
+2023-12-30 16:55:13 | ERROR | stderr |     sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+2023-12-30 16:55:13 | ERROR | stderr |     ssl_sock = ssl_wrap_socket(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+2023-12-30 16:55:13 | ERROR | stderr |     ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+2023-12-30 16:55:13 | ERROR | stderr |     return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/ssl.py", line 513, in wrap_socket
+2023-12-30 16:55:13 | ERROR | stderr |     return self.sslsocket_class._create(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/ssl.py", line 1071, in _create
+2023-12-30 16:55:13 | ERROR | stderr |     self.do_handshake()
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/ssl.py", line 1342, in do_handshake
+2023-12-30 16:55:13 | ERROR | stderr |     self._sslobj.do_handshake()
+2023-12-30 16:55:13 | ERROR | stderr | urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-12-30 16:55:13 | ERROR | stderr | 
+2023-12-30 16:55:13 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2023-12-30 16:55:13 | ERROR | stderr | 
+2023-12-30 16:55:13 | ERROR | stderr | Traceback (most recent call last):
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-12-30 16:55:13 | ERROR | stderr |     self.run()
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-12-30 16:55:13 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 386, in run_model_worker
+2023-12-30 16:55:13 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 214, in create_model_worker_app
+2023-12-30 16:55:13 | ERROR | stderr |     worker = ModelWorker(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2023-12-30 16:55:13 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 323, in load_model
+2023-12-30 16:55:13 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 784, in load_model
+2023-12-30 16:55:13 | ERROR | stderr |     model = AutoModel.from_pretrained(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 561, in from_pretrained
+2023-12-30 16:55:13 | ERROR | stderr |     return model_class.from_pretrained(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3351, in from_pretrained
+2023-12-30 16:55:13 | ERROR | stderr |     resolved_archive_file, sharded_metadata = get_checkpoint_shard_files(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/utils/hub.py", line 1017, in get_checkpoint_shard_files
+2023-12-30 16:55:13 | ERROR | stderr |     cached_filename = cached_file(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/utils/hub.py", line 389, in cached_file
+2023-12-30 16:55:13 | ERROR | stderr |     resolved_file = hf_hub_download(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2023-12-30 16:55:13 | ERROR | stderr |     return fn(*args, **kwargs)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+2023-12-30 16:55:13 | ERROR | stderr |     http_get(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 468, in http_get
+2023-12-30 16:55:13 | ERROR | stderr |     r = _request_wrapper(
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+2023-12-30 16:55:13 | ERROR | stderr |     response = get_session().request(method=method, url=url, **params)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+2023-12-30 16:55:13 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+2023-12-30 16:55:13 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+2023-12-30 16:55:13 | ERROR | stderr |     return super().send(request, *args, **kwargs)
+2023-12-30 16:55:13 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+2023-12-30 16:55:13 | ERROR | stderr |     raise ConnectionError(err, request=request)
+2023-12-30 16:55:13 | ERROR | stderr | requests.exceptions.ConnectionError: (ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), '(Request ID: c043ad6e-1385-4026-9a29-959761081bf1)')

@@ -1,0 +1,10 @@
+name: python
+description: Use Python interpreter to run python code
+parameters:
+  type: object
+  properties:
+    string:
+      type: string
+      description: The code to run
+required:
+ - string

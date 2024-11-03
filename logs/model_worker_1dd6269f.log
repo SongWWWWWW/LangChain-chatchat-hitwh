@@ -1,0 +1,12 @@
+2024-03-17 20:16:16 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker 1dd6269f ...
+2024-03-17 20:16:20 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                  | 0/7 [00:00<?, ?it/s]
+2024-03-17 20:16:20 | ERROR | stderr | Loading checkpoint shards:  14%|████████▎                                                 | 1/7 [00:00<00:01,  3.54it/s]
+2024-03-17 20:16:20 | ERROR | stderr | Loading checkpoint shards:  29%|████████████████▌                                         | 2/7 [00:00<00:01,  3.50it/s]
+2024-03-17 20:16:21 | ERROR | stderr | Loading checkpoint shards:  43%|████████████████████████▊                                 | 3/7 [00:00<00:01,  3.51it/s]
+2024-03-17 20:16:21 | ERROR | stderr | Loading checkpoint shards:  57%|█████████████████████████████████▏                        | 4/7 [00:01<00:00,  3.58it/s]
+2024-03-17 20:16:21 | ERROR | stderr | Loading checkpoint shards:  71%|█████████████████████████████████████████▍                | 5/7 [00:01<00:00,  3.45it/s]
+2024-03-17 20:16:21 | ERROR | stderr | Loading checkpoint shards:  86%|█████████████████████████████████████████████████▋        | 6/7 [00:01<00:00,  3.38it/s]
+2024-03-17 20:16:22 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  3.85it/s]
+2024-03-17 20:16:22 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  3.63it/s]
+2024-03-17 20:16:22 | ERROR | stderr | 
+2024-03-17 20:16:24 | INFO | model_worker | Register to controller

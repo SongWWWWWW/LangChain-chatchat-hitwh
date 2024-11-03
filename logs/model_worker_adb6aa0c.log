@@ -1,0 +1,59 @@
+2024-01-15 20:28:54 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker adb6aa0c ...
+2024-01-15 20:28:57 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2024-01-15 20:28:57 | ERROR | stderr | urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+2024-01-15 20:28:57 | ERROR | stderr | 
+2024-01-15 20:28:57 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-01-15 20:28:57 | ERROR | stderr | 
+2024-01-15 20:28:57 | ERROR | stderr | Traceback (most recent call last):
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+2024-01-15 20:28:57 | ERROR | stderr |     resp = conn.urlopen(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+2024-01-15 20:28:57 | ERROR | stderr |     retries = retries.increment(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+2024-01-15 20:28:57 | ERROR | stderr |     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2024-01-15 20:28:57 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /THUDM/chatglm3-6b/resolve/main/tokenizer_config.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
+2024-01-15 20:28:57 | ERROR | stderr | 
+2024-01-15 20:28:57 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-01-15 20:28:57 | ERROR | stderr | 
+2024-01-15 20:28:57 | ERROR | stderr | Traceback (most recent call last):
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2024-01-15 20:28:57 | ERROR | stderr |     self.run()
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/multiprocessing/process.py", line 108, in run
+2024-01-15 20:28:57 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 386, in run_model_worker
+2024-01-15 20:28:57 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/wcc/Langchain-Chatchat/startup.py", line 214, in create_model_worker_app
+2024-01-15 20:28:57 | ERROR | stderr |     worker = ModelWorker(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2024-01-15 20:28:57 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 323, in load_model
+2024-01-15 20:28:57 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 774, in load_model
+2024-01-15 20:28:57 | ERROR | stderr |     tokenizer = AutoTokenizer.from_pretrained(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 737, in from_pretrained
+2024-01-15 20:28:57 | ERROR | stderr |     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 569, in get_tokenizer_config
+2024-01-15 20:28:57 | ERROR | stderr |     resolved_config_file = cached_file(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/transformers/utils/hub.py", line 389, in cached_file
+2024-01-15 20:28:57 | ERROR | stderr |     resolved_file = hf_hub_download(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2024-01-15 20:28:57 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1247, in hf_hub_download
+2024-01-15 20:28:57 | ERROR | stderr |     metadata = get_hf_file_metadata(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+2024-01-15 20:28:57 | ERROR | stderr |     return fn(*args, **kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1624, in get_hf_file_metadata
+2024-01-15 20:28:57 | ERROR | stderr |     r = _request_wrapper(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 402, in _request_wrapper
+2024-01-15 20:28:57 | ERROR | stderr |     response = _request_wrapper(
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+2024-01-15 20:28:57 | ERROR | stderr |     response = get_session().request(method=method, url=url, **params)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+2024-01-15 20:28:57 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+2024-01-15 20:28:57 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+2024-01-15 20:28:57 | ERROR | stderr |     return super().send(request, *args, **kwargs)
+2024-01-15 20:28:57 | ERROR | stderr |   File "/home/root1/anaconda3/envs/langchain/lib/python3.10/site-packages/requests/adapters.py", line 517, in send
+2024-01-15 20:28:57 | ERROR | stderr |     raise SSLError(e, request=request)
+2024-01-15 20:28:57 | ERROR | stderr | requests.exceptions.SSLError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /THUDM/chatglm3-6b/resolve/main/tokenizer_config.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))"), '(Request ID: d98faf81-0b11-4e9c-8e45-284bb3cc5e37)')

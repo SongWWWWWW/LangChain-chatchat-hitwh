@@ -1,0 +1,4 @@
+2024-04-12 11:12:31 | INFO | model_worker | Register to controller
+2024-04-12 16:15:03 | ERROR | model_worker | heart beat error: Expecting value: line 1 column 1 (char 0)
+2024-04-12 16:15:08 | ERROR | model_worker | heart beat error: Expecting value: line 1 column 1 (char 0)
+2024-04-12 16:15:13 | ERROR | model_worker | heart beat error: Expecting value: line 1 column 1 (char 0)

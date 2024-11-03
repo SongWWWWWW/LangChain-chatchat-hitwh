@@ -1,0 +1,28 @@
+2024-04-07 17:14:33 | INFO | stdout | [32mINFO[0m:     172.26.94.25:36998 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 17:15:18 | INFO | stdout | [32mINFO[0m:     172.26.94.25:50442 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 17:26:17 | INFO | stdout | [32mINFO[0m:     172.26.94.25:54346 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 17:30:44 | INFO | stdout | [32mINFO[0m:     172.26.94.25:49172 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:33:25 | INFO | stdout | [32mINFO[0m:     172.26.94.25:60250 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:35:53 | INFO | stdout | [32mINFO[0m:     172.26.94.25:50400 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:39:21 | INFO | stdout | [32mINFO[0m:     172.26.94.25:49484 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:39:32 | INFO | stdout | [32mINFO[0m:     172.26.94.25:44932 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:43:10 | INFO | stdout | [32mINFO[0m:     172.26.94.25:52730 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:43:37 | INFO | stdout | [32mINFO[0m:     172.26.94.25:36130 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:52:12 | INFO | stdout | [32mINFO[0m:     172.26.94.25:35856 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 18:52:26 | INFO | stdout | [32mINFO[0m:     172.26.94.25:55862 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:00:24 | INFO | stdout | [32mINFO[0m:     172.26.94.25:44300 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:06:01 | INFO | stdout | [32mINFO[0m:     172.26.94.25:59902 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:06:14 | INFO | stdout | [32mINFO[0m:     172.26.94.25:38268 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:13:36 | INFO | stdout | [32mINFO[0m:     172.26.94.25:44744 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:14:20 | INFO | stdout | [32mINFO[0m:     172.26.94.25:46254 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:14:43 | INFO | stdout | [32mINFO[0m:     172.26.94.25:48714 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:17:50 | INFO | stdout | [32mINFO[0m:     172.26.94.25:47246 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 19:20:03 | INFO | stdout | [32mINFO[0m:     172.26.94.25:36930 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 21:31:02 | INFO | stdout | [32mINFO[0m:     172.26.94.25:59216 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 21:31:20 | INFO | stdout | [32mINFO[0m:     172.26.94.25:53008 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 21:46:15 | INFO | stdout | [32mINFO[0m:     172.26.94.25:52706 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 21:46:22 | INFO | stdout | [32mINFO[0m:     172.26.94.25:42830 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-04-07 21:46:59 | INFO | stdout | [32mINFO[0m:     172.26.94.25:45076 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 21:47:17 | INFO | stdout | [32mINFO[0m:     172.26.94.25:43474 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-04-07 21:47:26 | INFO | stdout | [32mINFO[0m:     172.26.94.25:55138 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-04-07 22:09:45 | INFO | stdout | [32mINFO[0m:     172.26.94.25:47670 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
