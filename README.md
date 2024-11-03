@@ -27,6 +27,7 @@ pip install -r requirements.txt
 pip install -r requirements_api.txt
 pip install -r requirements_webui.txt
 ```
-## 相关的对话信息以及api的使用在webui_page/dialogue/dialogue.py文件中
+## 相关的对话信息以及api的使用在
+[webui_page/dialogue/dialogue.py](https://github.com/SongWWWWWW/LangChain-chatchat-hitwh/blob/main/webui_pages/dialogue/dialogue.py)
 # 快速运行
 `bash run.sh`
