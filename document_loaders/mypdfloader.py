@@ -1,8 +1,8 @@
 from typing import List
 from langchain.document_loaders.unstructured import UnstructuredFileLoader
 import tqdm
-
-
+from magic_pdf import DiskReaderWriter, UNIPipe
+import os
 class RapidOCRPDFLoader(UnstructuredFileLoader):
     def _get_elements(self) -> List:
         def pdf2text(filepath):
@@ -42,9 +42,29 @@ class RapidOCRPDFLoader(UnstructuredFileLoader):
         return partition_text(text=text, **self.unstructured_kwargs)
 
 
+class MinerUPDFLoader(UnstructuredFileLoader):
+    def _get_elements(self) -> List:
+        def pdf2text(local_image_dir):
+            image_writer = DiskReaderWriter(local_image_dir)
+            image_dir = str(os.path.basename(local_image_dir))
+            jso_useful_key = {"_pdf_type": "", "model_list": []}
+            with open(local_image_dir, 'rb') as f:
+                pdf_bytes = f.read()
+
+            pipe = UNIPipe(pdf_bytes, jso_useful_key, image_writer)
+            pipe.pipe_classify()
+            pipe.pipe_analyze()
+            pipe.pipe_parse()
+            md_content = pipe.pipe_mk_markdown(image_dir, drop_mode="none")
+            return md_content
+
+        text = pdf2text(self.file_path)
+        return text
+
+
 if __name__ == "__main__":
     #loader = RapidOCRPDFLoader(file_path="../tests/samples/ocr_test.pdf")
-    loader = RapidOCRPDFLoader(file_path="../transformer.pdf")
+    loader = MinerUPDFLoader(file_path="../transformer.pdf")
 
     docs = loader.load()
     print(docs)
